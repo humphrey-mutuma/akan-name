@@ -6,31 +6,38 @@
 
 <p>Please input a number between 1 and 10:</p>
 
-<input id="centuryInput" type="number">
-<input id="yearInput" type="number">
-<input id="monthInput" type="number">
-<input id="dayInput" type="number">
+<input id="centuryInput">
+<input id="yearInput">
+<input id="monthInput">
+<input id="dayInput">
+
 
 <button type="button" onclick="myFunction()">Submit</button>
 
-<h2 id="myDayResults"></h2>
-<script src="js/scripts.js">
+<p id="centuryOutput"></p>
+<p id="yearOutput"></p>
+<p id="monthOutput"></p>
+<p id="dayOutput"></p>
 
-function myFunction(){
-    var CC, YY,MM,DD;
+
+<script>
+function myFunction() {
+    var CC,YY,MM,DD;
+
     // Get the value of the input field with id="numb"
-    CC = parseInt(document.getElementById("centuryInput").value) ;
-    YY = parseInt(document.getElementById("yearInput").value) ;
-    MM = parseInt(document.getElementById("monthInput").value) ;
-    DD = parseInt(document.getElementById("dayInput").value) ;
-    // The method that calculates the day
-    var myDay =  (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10))) % 7;
-        // the output
-     document.getElementById("myDayResults").innerHTML =Math.round(myDay) ;
+    CC = document.getElementById("centuryInput").value ;
+    YY = document.getElementById("yearInput").value ;
+    MM = document.getElementById("monthInput").value ;
+    DD = document.getElementById("dayInput").value ;
 
- }
-  myFunction();//call the function
 
+    document.getElementById("centuryOutput").innerHTML = CC ;
+    document.getElementById("yearOutput").innerHTML = YY ;
+    document.getElementById("monthOutput").innerHTML = MM ;
+    document.getElementById("dayOutput").innerHTML = DD ;
+
+
+}
 </script>
 
 </body>
