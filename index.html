@@ -6,10 +6,10 @@
 
 <p>Please input a number between 1 and 10:</p>
 
-<input id="centuryInput">
-<input id="yearInput">
-<input id="monthInput">
-<input id="dayInput">
+<input id="centuryInput"> <br>
+<input id="yearInput"> <br>
+<input id="monthInput"> <br>
+<input id="dayInput"> <br>
 
 
 <button type="button" onclick="myFunction()">Submit</button>
@@ -25,16 +25,14 @@ function myFunction() {
     var CC,YY,MM,DD;
 
     // Get the value of the input field with id="numb"
-    CC = document.getElementById("centuryInput").value ;
-    YY = document.getElementById("yearInput").value ;
-    MM = document.getElementById("monthInput").value ;
-    DD = document.getElementById("dayInput").value ;
+    CC = parseInt(document.getElementById("centuryInput").value);
+    YY = parseInt(document.getElementById("yearInput").value );
+    MM = parseInt(document.getElementById("monthInput").value);
+    DD = parseInt( document.getElementById("dayInput").value );
 
+     myDOW = CC + YY + MM + DD;
 
-    document.getElementById("centuryOutput").innerHTML = CC ;
-    document.getElementById("yearOutput").innerHTML = YY ;
-    document.getElementById("monthOutput").innerHTML = MM ;
-    document.getElementById("dayOutput").innerHTML = DD ;
+    document.getElementById("dayOutput").innerHTML = myDOW ;
 
 
 }
