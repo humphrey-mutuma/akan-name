@@ -19,7 +19,7 @@
 <!-- <input type="radio" name="gender" value="male" checked> Male<br>
 <input type="radio" name="gender" value="female"> Female<br> -->
 
-<button type="button" onclick="validateMonth(); myFunction()">Submit</button>
+<button type="button" onclick="validateMonth(); validateDays(); myFunction()">Submit</button>
 
 <p id="OutputDOW"></p>
 <p id="gender"></p>
@@ -29,20 +29,35 @@
 
 
 <script>   
+// function to validate the months to fall between 1 and 12.
    function validateMonth() {
        var MM, text;
         MM = parseInt(document.getElementById("monthInput").value);
           // If MM is less than 1 or greater than 12
             if ( MM < 1 || MM > 12) {
+                alert("Invalid month input");
                 document.getElementById("monthInput").value = "";
-                alert("Invalid input")
                 text = "Input not valid; month can only be from 1 to 12";
             } else {
                 text = MM ;
             }
             document.getElementById("OutputDOW").innerHTML = text;
-      }
-
+    }
+// function to validate the dats of the month to fall between 1 and 31.
+    function validateDays() {
+        var DD, message;
+            DD = parseInt(document.getElementById("dayInput").value);
+            // If MM is less than 1 or greater than 12
+                if ( DD < 1 || DD > 31) {
+                    alert("Invalid day input");
+                    document.getElementById("dayInput").value = "";
+                    message = "Input not valid; month can only be from 1 to 12";
+                } else {
+                    message = DD ;
+                }
+                document.getElementById("OutputDOW").innerHTML = message;
+    }
+// Main function
 function myFunction() {
     var CC,YY,MM,DD,gender;
     // Get the value of the input field fields
