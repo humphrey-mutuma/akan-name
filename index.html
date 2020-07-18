@@ -19,7 +19,7 @@
 <!-- <input type="radio" name="gender" value="male" checked> Male<br>
 <input type="radio" name="gender" value="female"> Female<br> -->
 
-<button type="button" onclick="validateMonth(); validateDays(); myFunction()">Submit</button>
+<button type="button" onclick="validateInputs(); validateMonth(); validateDays(); myFunction()">Submit</button>
 
 <p id="OutputDOW"></p>
 <p id="gender"></p>
@@ -29,6 +29,22 @@
 
 
 <script>   
+// function to validate input of type numbers only
+    function validateInputs() {
+        var CC,YY,MM,DD;
+        // Get the value of the input field fields
+        CC = parseInt(document.getElementById("centuryInput").value);
+        YY = parseInt(document.getElementById("yearInput").value );
+        MM = parseInt(document.getElementById("monthInput").value);
+        DD = parseInt( document.getElementById("dayInput").value );
+
+        if(isNaN(CC) || isNaN(YY) || isNaN(MM) || isNaN(DD)){
+            alert("Please input numbers only");
+        }else{
+            document.getElementById("OutputDOW").innerHTML = "valid inputs";
+        }
+    }
+
 // function to validate the months to fall between 1 and 12.
    function validateMonth() {
        var MM, text;
