@@ -8,7 +8,7 @@
 
 <input id="centuryInput"> <br>
 <input id="yearInput"> <br>
-<input id="monthInput"> <br>
+<input id="monthInput" > <br>
 <input id="dayInput"> <br>
 <div id="gender1">
  <h5><b>Male or Female?</b>:
@@ -19,16 +19,30 @@
 <!-- <input type="radio" name="gender" value="male" checked> Male<br>
 <input type="radio" name="gender" value="female"> Female<br> -->
 
-<button type="button" onclick="myFunction()">Submit</button>
+<button type="button" onclick="validateMonth(); myFunction()">Submit</button>
 
 <p id="OutputDOW"></p>
 <p id="gender"></p>
 <p id="akanNameOutput"></p>
-<!-- <p id="monthOutput"></p>
-<p id="dayOutput"></p> -->
+<p id="monthOutput"></p>
+<p id="dayOutput"></p> 
 
 
-<script>
+<script>   
+   function validateMonth() {
+       var MM, text;
+        MM = parseInt(document.getElementById("monthInput").value);
+          // If MM is less than 1 or greater than 12
+            if ( MM < 1 || MM > 12) {
+                document.getElementById("monthInput").value = "";
+                alert("Invalid input")
+                text = "Input not valid; month can only be from 1 to 12";
+            } else {
+                text = MM ;
+            }
+            document.getElementById("OutputDOW").innerHTML = text;
+      }
+
 function myFunction() {
     var CC,YY,MM,DD,gender;
     // Get the value of the input field fields
