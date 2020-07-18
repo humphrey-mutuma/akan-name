@@ -30,7 +30,7 @@ function myFunction() {
     MM = parseInt(document.getElementById("monthInput").value);
     DD = parseInt( document.getElementById("dayInput").value );
 
-     myDOW = CC + YY + MM + DD;
+     myDOW = Math.round((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7) ;
 
     document.getElementById("dayOutput").innerHTML = myDOW ;
 
