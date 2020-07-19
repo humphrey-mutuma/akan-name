@@ -8,7 +8,7 @@
 
 <input id="centuryInput"> <br>
 <input id="yearInput"> <br>
-<input id="monthInput" > <br>
+<input id="monthInput"> <br>
 <input id="dayInput"> <br>
 <div id="gender1">
  <h5><b>Male or Female?</b>:
@@ -16,8 +16,6 @@
     <input type="radio" id="r2" name="gender" value="Female"> Female
  </h5>
 </div>
-<!-- <input type="radio" name="gender" value="male" checked> Male<br>
-<input type="radio" name="gender" value="female"> Female<br> -->
 
 <button type="button" onclick="validateInputs(); validateMonth(); validateDays(); myFunction()">Submit</button>
 
@@ -26,7 +24,6 @@
 <p id="akanNameOutput"></p>
 <p id="monthOutput"></p>
 <p id="dayOutput"></p> 
-
 
 <script>   
 // function to validate input of type numbers only
@@ -37,11 +34,13 @@
         YY = parseInt(document.getElementById("yearInput").value );
         MM = parseInt(document.getElementById("monthInput").value);
         DD = parseInt( document.getElementById("dayInput").value );
+        gender = document.querySelector('input[type=radio]:checked').value;
 
-        if(isNaN(CC) || isNaN(YY) || isNaN(MM) || isNaN(DD)){
-            alert("Please input numbers only");
-        }else{
-            document.getElementById("OutputDOW").innerHTML = "valid inputs";
+        if(CC == "" || YY == "" || MM == "" || DD == "") {
+            alert("Invalid input! or Missing inputs. Kindly fill in with numbers only.");
+        } 
+        if(isNaN(CC) || isNaN(YY) || isNaN(MM) || isNaN(DD) || gender == null ){
+            alert("Invalid input! or Missing inputs. Kindly fill in with numbers only.");
         }
     }
 
@@ -82,8 +81,9 @@ function myFunction() {
     MM = parseInt(document.getElementById("monthInput").value);
     DD = parseInt( document.getElementById("dayInput").value );
     gender = document.querySelector('input[type=radio]:checked').value;
+
     //calculate the day of the week
-     myDOW = Math.round((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7) ;
+     myDOW = Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7) ;
 
     document.getElementById("OutputDOW").innerHTML = myDOW ;
     document.getElementById("gender").innerHTML = gender ;
@@ -122,12 +122,7 @@ function myFunction() {
         document.getElementById("akanNameOutput").innerHTML = male[6] ;
     }else if(myDOW === 6 && gender === "Female"){
         document.getElementById("akanNameOutput").innerHTML = female[6] ;
-    }else if(myDOW === 7 && gender=== "Male"){
-        document.getElementById("akanNameOutput").innerHTML = male[6] ;
-    }else if(myDOW === 7 && gender === "Female"){
-        document.getElementById("akanNameOutput").innerHTML = female[6] ;
-    }
-    else{
+    }else{
         document.getElementById("akanNameOutput").innerHTML = "Invalid input somewhere";
     }
 
