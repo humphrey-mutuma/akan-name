@@ -17,23 +17,27 @@
             <h2>Know your Akan name here!</h2>
             <form action="#" method="get">
                 <div>
-                    <h3>Enter the century you were born</h3>
-                <input id="centuryInput"> <br>
+                    <h5>Enter the century you were born(e.g. 20,19)</h5>
+                    <input id="centuryInput"> <br>
                 </div>
                 <div>
-                <input id="yearInput"> <br>
+                    <h5>Enter the year you were born(e.g. 1999.)</h5>
+                    <input id="yearInput"> <br>
                 </div>
                 <div>
-                <input id="monthInput"> <br>
+                    <h5>Enter the month you were born(1-12)</h5>
+                    <input id="monthInput"> <br>
                 </div>
                 <div>
-                <input id="dayInput"> <br>
+                    <h5>Enter the day you were born(1-31)</h5>
+                    <input id="dayInput"> <br>
                 </div>
                 <div id="gender1">
-                <h5><b>Male or Female?</b>:
-                    <input type="radio" id="r1" name="gender" value="Male"> Male
-                    <input type="radio" id="r2" name="gender" value="Female"> Female
-                </h5>
+                    <h5>Enter your gender</h5>
+                    <h5><b>Male or Female?</b>:
+                        <input type="radio" id="r1" name="gender" value="Male" checked> Male
+                        <input type="radio" id="r2" name="gender" value="Female" > Female
+                    </h5>
                 </div>
 
                 <button type="button" onclick="validateInputs(); validateMonth(); validateDays(); myFunction()">Submit</button>
