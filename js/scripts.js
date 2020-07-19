@@ -57,8 +57,8 @@ function myFunction() {
 //calculate the day of the week
     myDOW = Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7) ;
 
-    document.getElementById("OutputDOW").innerHTML = myDOW ;
-    document.getElementById("gender").innerHTML = gender ;
+    document.getElementById("OutputDOW").innerHTML = "You were born on the" + myDOW + "th" +" day of th week";
+    document.getElementById("gender").innerHTML = "Your gender is" + gender ;
     // an array of male names
     var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     //an array of female names
