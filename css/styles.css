@@ -1,0 +1,11 @@
+body{
+    background-color: aliceblue;
+    text-align: center;
+}
+section{
+    margin-top: 5px;
+    padding-bottom: 20vh;
+}
+.row{
+    background-color: rgba(0, 0, 0, 0.247);
+}
