@@ -57,8 +57,8 @@ function myFunction() {
 //calculate the day of the week
     myDOW = Math.floor((((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD)%7) ;
 
-    document.getElementById("OutputDOW").innerHTML = "You were born on the" + myDOW + "th" +" day of th week";
-    document.getElementById("gender").innerHTML = "Your gender is" + gender ;
+    document.getElementById("OutputDOW").innerHTML = "You were born on the " + myDOW + "<sup>th</sup>" +" day of the week.";
+    document.getElementById("gender").innerHTML = "Your gender is " + gender + "." ;
     // an array of male names
     var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     //an array of female names
@@ -95,7 +95,7 @@ function myFunction() {
     }else if(myDOW === 6 && gender === "Female"){
         document.getElementById("akanNameOutput").innerHTML = female[6] ;
     }else{
-        document.getElementById("akanNameOutput").innerHTML = "Invalid input somewhere";
+        document.getElementById("akanNameOutput").innerHTML = "Invalid input somewhere.";
     }
 
 }
