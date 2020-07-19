@@ -8,16 +8,27 @@ section{
     padding-bottom: auto;
 }
 .row{
-    background-color: rgba(0, 0, 0, 0.774);
+    background-color: rgba(0, 0, 0, 0.815);
     width: auto;
     height: auto;
     justify-content: center;
     align-items: center;
 }
+.row h5,p{
+    margin: 5px 10%;
+}
 .myForm{
     border: 1px solid white;
     margin: 5px 15%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+.myForm input,button{
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+    margin: 2.5px auto;
 }
 #akanNameOutput{
-    color: blue;
+    color: skyblue;
 }
