@@ -14,8 +14,10 @@
 <section class="container" style="background-image: url('images/akan.jpg');">
     <div class="row">
         <div class="col-12">
+            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
+            <h4>This application will take your birthday date and gender and output to you youe Akan name from the Ghanian culture.</h4>
             <h2>Know your Akan name here!</h2>
-            <form action="#" method="get">
+            <form action="#" method="get" class="myForm">
                 <div>
                     <h5>Enter the century you were born(e.g. 20,19)</h5>
                     <input id="centuryInput"> <br>
@@ -42,9 +44,14 @@
 
                 <button type="button" onclick="validateInputs(); validateMonth(); validateDays(); myFunction()">Submit</button>
             </form>
-                <p id="OutputDOW"></p>
-                <p id="gender"></p>
-                <p id="akanNameOutput"></p>
+                <h2 id="OutputDOW"></h2>
+
+                <p id="gender">Your Gender is:</p>
+                <div> 
+                    <h3>Your Akan Name is:</h3>
+                    <h1 id="akanNameOutput"></h1>
+                </div>
+                
                 <p id="monthOutput"></p>
                 <p id="dayOutput"></p> 
         </div>

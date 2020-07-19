@@ -1,11 +1,23 @@
 body{
     background-color: aliceblue;
     text-align: center;
+    color: white;
 }
 section{
     margin-top: 5px;
-    padding-bottom: 20vh;
+    padding-bottom: auto;
 }
 .row{
-    background-color: rgba(0, 0, 0, 0.247);
+    background-color: rgba(0, 0, 0, 0.774);
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.myForm{
+    border: 1px solid white;
+    margin: 5px 15%;
+}
+#akanNameOutput{
+    color: blue;
 }
