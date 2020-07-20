@@ -30,7 +30,7 @@ Frequently in Ghana, children are given their first name as a 'day name' which c
 
 Project setup instructions: You can fork this projects from GitHub.
 
-### Built with;
+### Technologies used;
 > HTML
 
 > CSS
@@ -38,6 +38,8 @@ Project setup instructions: You can fork this projects from GitHub.
 >Bootstrap
 
 >JavaScript
+
+>Markdown
 
  ### Development
 Want to contribute? Great!
@@ -59,6 +61,6 @@ To fix a bug or enhance an existing module, follow these steps:
 - Create a Pull Request
 
 #### Demo : 
-Here is the link to live demo [Link to live site here](https://humphrey-mutuma.github.io/akan-name/)
+Here is the link to live demo [Click me](https://humphrey-mutuma.github.io/akan-name/)
 
 Copyright and license information: This project is licensed under the terms of the MIT license.
