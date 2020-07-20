@@ -44,6 +44,9 @@ function validateDays() {
             }
             document.getElementById("OutputDOW").innerHTML = message;
 }
+ function restFunction(){
+     document.getElementById("myForm").reset();
+ }
 // Main function
 function myFunction() {
     var CC,YY,MM,DD,gender;

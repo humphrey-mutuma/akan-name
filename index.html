@@ -17,7 +17,7 @@
             <h5>This application will take your birthday date and gender and output to you your Akan name from the Ghanian culture.</h5>
             <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</p>
             <h2>Know your Akan name here!</h2>
-            <form action="#" method="get" class="myForm">
+            <form action="#" method="get" class="myForm" id="myForm">
                 <div>
                     <h5>Enter the century you were born(e.g. 20)</h5>
                     <input id="centuryInput" placeholder="Enter birth century..."> <br>
@@ -42,6 +42,7 @@
                     </h5>
                 </div>
                 <button type="button" onclick="validateInputs(); validateMonth(); validateDays(); myFunction()">Submit</button>
+                <button type="button" onclick="resetFunction()">Clear</button>
             </form>
                 <p id="OutputDOW"></p>
                 <p id="gender">Your Gender is:</p>
