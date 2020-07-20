@@ -29,7 +29,21 @@ Frequently in Ghana, children are given their first name as a 'day name' which c
 - Saturday: Ama
 
 Project setup instructions: You can fork this projects from GitHub.
+# BBD
 
+| Inputs  | Description  |
+|---|---|
+|Century  | The century that the user was born in, eg 20th  |
+| Year  | The year of the century eg 98th year  |
+| Month  |  The month of the year eg 7th month |
+| Date  | The day of the month eg 15th day |
+
+| Output  | Description  |
+|---|---|
+|Day   | The day of the week you were born .eg 5th|
+| Gender  | Your gender, either male or female. |
+| Akan name  |  Your Akan name, highlighted in blue. |
+	
 ### Technologies used;
 > HTML
 
