@@ -29,7 +29,7 @@ Frequently in Ghana, children are given their first name as a 'day name' which c
 - Saturday: Ama
 
 Project setup instructions: You can fork this projects from GitHub.
-# BBD
+# BDD
 
 | Inputs  | Description  |
 |---|---|
