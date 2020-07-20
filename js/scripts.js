@@ -44,8 +44,12 @@ function validateDays() {
             }
             document.getElementById("OutputDOW").innerHTML = message;
 }
- function restFunction(){
-     document.getElementById("myForm").reset();
+ function resetFunction(){
+    document.getElementById("centuryInput").value = "";
+    document.getElementById("yearInput").value = "";
+    document.getElementById("monthInput").value = "";
+    document.getElementById("dayInput").value = "";
+    document.querySelector('input[type=radio]:checked').value = "";
  }
 // Main function
 function myFunction() {
